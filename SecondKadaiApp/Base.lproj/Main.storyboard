@@ -82,23 +82,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-rX-gtV">
-                                <rect key="frame" x="16" y="41" width="343" height="626"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="lcP-Dg-gSM" kind="unwind" unwindAction="unwindWithSegue:" id="IzQ-HH-o3N"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-if-55F">
-                                <rect key="frame" x="166.5" y="178" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="178" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n9L-O8-p1l">
+                                <rect key="frame" x="172" y="240" width="31" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-rX-gtV">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <segue destination="lcP-Dg-gSM" kind="unwind" unwindAction="unwindWithSegue:" id="IzQ-HH-o3N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nx6-pS-cuM"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="n9L-O8-p1l" firstAttribute="top" secondItem="0cb-if-55F" secondAttribute="bottom" constant="41" id="SyY-WQ-izc"/>
+                            <constraint firstItem="n9L-O8-p1l" firstAttribute="centerX" secondItem="WaI-X8-Smn" secondAttribute="centerX" id="aWq-9A-dLU"/>
                             <constraint firstItem="0cb-if-55F" firstAttribute="centerX" secondItem="WaI-X8-Smn" secondAttribute="centerX" id="nga-Ce-WVW"/>
                             <constraint firstItem="0cb-if-55F" firstAttribute="top" secondItem="Cy7-ef-Rzy" secondAttribute="bottom" constant="158" id="zzA-TU-g9S"/>
                         </constraints>
